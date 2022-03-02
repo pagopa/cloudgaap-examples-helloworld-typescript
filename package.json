@@ -4,10 +4,10 @@
   "description": "HelloWorld example for CloudGaaP",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rimraf dist",
+    "clean": "rimraf dist",
     "build": "tsc && gulp",
     "start": "node dist/index.js",
-    "start:dev": "yarn build && node -r dotenv/config dist/index.js dotenv_config_path=.env.default",
+    "start:dev": "yarn clean && yarn build && node -r dotenv/config dist/index.js dotenv_config_path=.env.default",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
